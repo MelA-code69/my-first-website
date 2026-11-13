@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist Noël 2026</title>
+  <meta name="description" content="Mes idées de cadeaux pour Noël 2026 : réservez-en une pour éviter les doublons !">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Flocons qui tombent (décoration) -->
+  <div class="flocons" aria-hidden="true">
+    <span>❄</span><span>❅</span><span>❆</span><span>❄</span><span>❅</span>
+    <span>❆</span><span>❄</span><span>❅</span><span>❆</span><span>❄</span>
+    <span>❅</span><span>❆</span>
+  </div>
+
+  <!-- =========================================================
+       1. EN-TÊTE
+       ========================================================= -->
+  <header class="entete">
+
+    <!-- Boules de Noël suspendues -->
+    <div class="boules" aria-hidden="true">
+      <svg class="boule boule-1" viewBox="0 0 40 110"><line x1="20" y1="0" x2="20" y2="62" /><rect x="15" y="60" width="10" height="8" rx="2" class="attache"/><circle cx="20" cy="86" r="18" class="sauge"/><path d="M8 80 Q20 74 32 80" class="reflet"/></svg>
+      <svg class="boule boule-2" viewBox="0 0 40 80"><line x1="20" y1="0" x2="20" y2="32" /><rect x="15" y="30" width="10" height="8" rx="2" class="attache"/><circle cx="20" cy="56" r="16" class="rose"/><path d="M9 52 Q20 46 31 52" class="reflet"/></svg>
+      <svg class="boule boule-3" viewBox="0 0 40 130"><line x1="20" y1="0" x2="20" y2="82" /><rect x="15" y="80" width="10" height="8" rx="2" class="attache"/><circle cx="20" cy="106" r="18" class="or"/><path d="M8 100 Q20 94 32 100" class="reflet"/></svg>
+      <svg class="boule boule-4" viewBox="0 0 40 90"><line x1="20" y1="0" x2="20" y2="42" /><rect x="15" y="40" width="10" height="8" rx="2" class="attache"/><circle cx="20" cy="66" r="16" class="sauge"/><path d="M9 62 Q20 56 31 62" class="reflet"/></svg>
+      <svg class="boule boule-5" viewBox="0 0 40 120"><line x1="20" y1="0" x2="20" y2="72" /><rect x="15" y="70" width="10" height="8" rx="2" class="attache"/><circle cx="20" cy="96" r="18" class="rose"/><path d="M8 90 Q20 84 32 90" class="reflet"/></svg>
+    </div>
+
+    <div class="entete-contenu">
+      <!-- Petite étoile -->
+      <svg class="etoile" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>
+
+      <h1 class="titre">
+        <span class="titre-wishlist">Wishlist</span>
+        <span class="titre-noel">Noël 2026</span>
+      </h1>
+      <p class="sous-titre">
+        Coucou la famille&nbsp;! Voici quelques idées qui me feraient plaisir.
+        Quand vous en choisissez une, cliquez sur <strong>«&nbsp;Réserver&nbsp;»</strong>
+        pour que les autres sachent qu’elle est déjà prise&nbsp;🎁
+      </p>
+    </div>
+
+    <!-- Petits sapins -->
+    <div class="sapins" aria-hidden="true">
+      <svg viewBox="0 0 60 80" class="sapin sapin-petit"><path d="M30 4 L52 40 H40 L56 66 H4 L20 40 H8 Z"/><rect x="25" y="66" width="10" height="10" rx="2" class="tronc"/></svg>
+      <svg viewBox="0 0 60 80" class="sapin"><path d="M30 4 L52 40 H40 L56 66 H4 L20 40 H8 Z"/><rect x="25" y="66" width="10" height="10" rx="2" class="tronc"/><circle cx="24" cy="36" r="3" class="deco-rose"/><circle cx="36" cy="52" r="3" class="deco-or"/><circle cx="20" cy="58" r="3" class="deco-or"/></svg>
+      <svg viewBox="0 0 60 80" class="sapin sapin-petit"><path d="M30 4 L52 40 H40 L56 66 H4 L20 40 H8 Z"/><rect x="25" y="66" width="10" height="10" rx="2" class="tronc"/></svg>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. LISTE DES IDÉES
+         ---------------------------------------------------------
+         Pour modifier une idée :
+           - le TITRE : le texte entre <a ...> et </a>
+           - le LIEN  : l'adresse dans href="..."
+           - l'IMAGE  : l'adresse dans src="..." (un fichier du dossier
+                        images/ ou une adresse web https://...)
+           - pense aussi à mettre à jour alt="..." (description de l'image)
+
+         Pour ajouter une idée : copie un bloc <article> ... </article>
+         complet et donne-lui un NOUVEAU numéro dans data-id="...".
+         ⚠️ Ne change pas le data-id d'une idée déjà réservée :
+         c'est lui qui relie l'idée à sa réservation.
+         ========================================================= -->
+    <section class="idees" aria-labelledby="titre-idees">
+
+      <h2 id="titre-idees" class="titre-section">
+        <svg class="houx" viewBox="0 0 64 40" aria-hidden="true">
+          <path class="feuille" d="M30 22 C22 8 10 6 2 10 C8 12 6 18 12 18 C10 22 16 26 20 24 C22 28 28 26 30 22 Z"/>
+          <path class="feuille" d="M34 22 C42 8 54 6 62 10 C56 12 58 18 52 18 C54 22 48 26 44 24 C42 28 36 26 34 22 Z"/>
+          <circle class="baie" cx="27" cy="26" r="5"/><circle class="baie" cx="37" cy="26" r="5"/><circle class="baie" cx="32" cy="32" r="5"/>
+        </svg>
+        Mes idées cadeaux
+      </h2>
+
+      <p class="message-statut" id="message-statut" hidden></p>
+
+      <div class="grille-idees">
+        <!-- ===== IDÉE 1 ===== -->
+        <article class="idee" data-id="1">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/plaid" target="_blank" rel="noopener">Un plaid tout doux</a></h3>
+          <img class="idee-image" src="images/idee-01.svg" alt="Un plaid tout doux" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 2 ===== -->
+        <article class="idee" data-id="2">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/livre-recettes" target="_blank" rel="noopener">Un livre de recettes de saison</a></h3>
+          <img class="idee-image" src="images/idee-02.svg" alt="Un livre de recettes de saison" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 3 ===== -->
+        <article class="idee" data-id="3">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/bougie" target="_blank" rel="noopener">Une bougie parfumée</a></h3>
+          <img class="idee-image" src="images/idee-03.svg" alt="Une bougie parfumée" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 4 ===== -->
+        <article class="idee" data-id="4">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/carnet" target="_blank" rel="noopener">Un carnet de voyage</a></h3>
+          <img class="idee-image" src="images/idee-04.svg" alt="Un carnet de voyage" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 5 ===== -->
+        <article class="idee" data-id="5">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/the" target="_blank" rel="noopener">Un coffret de thés</a></h3>
+          <img class="idee-image" src="images/idee-05.svg" alt="Un coffret de thés" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 6 ===== -->
+        <article class="idee" data-id="6">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/tote-bag" target="_blank" rel="noopener">Un tote bag illustré</a></h3>
+          <img class="idee-image" src="images/idee-06.svg" alt="Un tote bag illustré" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 7 ===== -->
+        <article class="idee" data-id="7">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/plante" target="_blank" rel="noopener">Une jolie plante d’intérieur</a></h3>
+          <img class="idee-image" src="images/idee-07.svg" alt="Une jolie plante d’intérieur" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 8 ===== -->
+        <article class="idee" data-id="8">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/puzzle" target="_blank" rel="noopener">Un puzzle de 1000 pièces</a></h3>
+          <img class="idee-image" src="images/idee-08.svg" alt="Un puzzle de 1000 pièces" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 9 ===== -->
+        <article class="idee" data-id="9">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/pyjama" target="_blank" rel="noopener">Un pyjama en flanelle</a></h3>
+          <img class="idee-image" src="images/idee-09.svg" alt="Un pyjama en flanelle" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+        <!-- ===== IDÉE 10 ===== -->
+        <article class="idee" data-id="10">
+          <h3 class="idee-titre"><a href="https://www.exemple.com/atelier-ceramique" target="_blank" rel="noopener">Un atelier de céramique</a></h3>
+          <img class="idee-image" src="images/idee-10.svg" alt="Un atelier de céramique" loading="lazy">
+          <button class="bouton-reserver" type="button">Réserver</button>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       3. PIED DE PAGE
+       ========================================================= -->
+  <footer class="pied">
+    <svg class="cadeau" viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="10" y="26" width="44" height="32" rx="4" class="boite"/>
+      <rect x="6" y="18" width="52" height="12" rx="4" class="couvercle"/>
+      <rect x="28" y="18" width="8" height="40" class="ruban"/>
+      <path d="M32 18 C22 4 10 10 20 18 Z M32 18 C42 4 54 10 44 18 Z" class="noeud"/>
+    </svg>
+    <p>Merci et joyeux Noël à tous&nbsp;! ♥</p>
+  </footer>
+
+
+  <script>
+    /* =========================================================
+       RÉSERVATIONS
+       ---------------------------------------------------------
+       Pour que tout le monde voie les réservations, colle entre
+       les guillemets ci-dessous l'adresse de ton Google Apps Script
+       (voir le fichier README.md, étape par étape).
+
+       Tant que c'est vide, les réservations ne sont enregistrées
+       que sur l'appareil de la personne qui clique.
+       ========================================================= */
+    const URL_RESERVATIONS = "";
+
+
+    /* ---- Rien à modifier en dessous de cette ligne ---- */
+
+    const CLE_LOCALE = "wishlist-noel-2026";
+    const modePartage = URL_RESERVATIONS.trim() !== "";
+    const cartes = document.querySelectorAll(".idee");
+    const statut = document.getElementById("message-statut");
+
+    let reservees = new Set();   // numéros des idées réservées
+    let mesJetons = {};          // idées réservées depuis CET appareil : { id: jeton }
+
+    // --- Petite mémoire locale (fonctionne même si le stockage est bloqué) ---
+    function lireLocal() {
+      try { return JSON.parse(localStorage.getItem(CLE_LOCALE)) || {}; }
+      catch (e) { return {}; }
+    }
+    function ecrireLocal(donnees) {
+      try { localStorage.setItem(CLE_LOCALE, JSON.stringify(donnees)); } catch (e) {}
+    }
+    function sauverMesJetons() {
+      const d = lireLocal(); d.jetons = mesJetons; ecrireLocal(d);
+    }
+
+    // --- Échanges avec le Google Sheet ---
+    async function appelerServeur(parametres) {
+      const url = URL_RESERVATIONS + "?" + new URLSearchParams(parametres);
+      const reponse = await fetch(url);
+      if (!reponse.ok) throw new Error("Erreur " + reponse.status);
+      const donnees = await reponse.json();
+      if (Array.isArray(donnees.reservees)) reservees = new Set(donnees.reservees.map(String));
+      return donnees;
+    }
+
+    function afficherStatut(texte) {
+      statut.textContent = texte;
+      statut.hidden = !texte;
+    }
+
+    // --- Mise à jour de l'affichage des cartes ---
+    function afficher() {
+      cartes.forEach(function (carte) {
+        const id = carte.dataset.id;
+        const bouton = carte.querySelector(".bouton-reserver");
+        const estReservee = reservees.has(id);
+        const parMoi = estReservee && mesJetons[id];
+
+        carte.classList.toggle("est-reservee", estReservee);
+        bouton.textContent = estReservee ? "Réservé ✓" : "Réserver";
+        bouton.disabled = estReservee && !parMoi;
+        bouton.title = parMoi ? "C’est toi qui l’as réservé : clique pour annuler" : "";
+        bouton.setAttribute("aria-pressed", estReservee ? "true" : "false");
+      });
+    }
+
+    function nouveauJeton() {
+      return "j" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    }
+
+    // --- Clic sur un bouton ---
+    async function auClic(carte) {
+      const id = carte.dataset.id;
+      const bouton = carte.querySelector(".bouton-reserver");
+      const titre = carte.querySelector(".idee-titre").textContent.trim();
+
+      // Annuler une réservation faite depuis cet appareil
+      if (reservees.has(id)) {
+        if (!mesJetons[id]) return;
+        if (!confirm("Annuler ta réservation de « " + titre + " » ?")) return;
+        bouton.disabled = true; bouton.textContent = "…";
+        try {
+          if (modePartage) await appelerServeur({ action: "annuler", id: id, jeton: mesJetons[id] });
+          reservees.delete(id);
+          delete mesJetons[id];
+          sauverMesJetons();
+          if (!modePartage) { const d = lireLocal(); d.reservees = [...reservees]; ecrireLocal(d); }
+        } catch (e) {
+          alert("Oups, l’annulation n’a pas fonctionné. Vérifie ta connexion et réessaie.");
+        }
+        afficher();
+        return;
+      }
+
+      // Réserver
+      if (!confirm("Réserver « " + titre + " » ?\nLes autres verront que cette idée est prise.")) return;
+      const jeton = nouveauJeton();
+      bouton.disabled = true; bouton.textContent = "…";
+      try {
+        if (modePartage) {
+          const rep = await appelerServeur({ action: "reserver", id: id, jeton: jeton });
+          if (!rep.ok) {
+            alert("Trop tard ! Quelqu’un vient juste de réserver cette idée 🙂");
+            afficher();
+            return;
+          }
+        } else {
+          reservees.add(id);
+          const d = lireLocal(); d.reservees = [...reservees]; ecrireLocal(d);
+        }
+        mesJetons[id] = jeton;
+        sauverMesJetons();
+        afficher();
+        confettis(bouton);
+      } catch (e) {
+        alert("Oups, la réservation n’a pas pu être enregistrée. Vérifie ta connexion et réessaie.");
+        afficher();
+      }
+    }
+
+    // --- Petite pluie de confettis quand on réserve ---
+    function confettis(element) {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const couleurs = ["#9CAF88", "#E8B4B0", "#D9B26F", "#C8574D", "#FFFFFF"];
+      const zone = element.getBoundingClientRect();
+      for (let i = 0; i < 26; i++) {
+        const c = document.createElement("span");
+        c.className = "confetti";
+        c.style.background = couleurs[i % couleurs.length];
+        c.style.left = zone.left + zone.width / 2 + "px";
+        c.style.top = zone.top + zone.height / 2 + "px";
+        document.body.appendChild(c);
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 50 + Math.random() * 90;
+        c.animate([
+          { transform: "translate(0,0) rotate(0deg)", opacity: 1 },
+          { transform: "translate(" + Math.cos(angle) * distance + "px," + (Math.sin(angle) * distance + 80) + "px) rotate(" + (Math.random() * 720) + "deg)", opacity: 0 }
+        ], { duration: 900 + Math.random() * 500, easing: "cubic-bezier(.2,.7,.4,1)" }).onfinish = function () { c.remove(); };
+      }
+    }
+
+    // --- Démarrage ---
+    async function demarrer() {
+      const local = lireLocal();
+      mesJetons = local.jetons || {};
+
+      cartes.forEach(function (carte) {
+        carte.querySelector(".bouton-reserver").addEventListener("click", function () { auClic(carte); });
+      });
+
+      if (!modePartage) {
+        reservees = new Set((local.reservees || []).map(String));
+        afficher();
+        console.info("Wishlist : URL_RESERVATIONS est vide, les réservations restent sur cet appareil.");
+        return;
+      }
+
+      // En attendant la réponse du serveur, on bloque les boutons
+      cartes.forEach(function (carte) {
+        const b = carte.querySelector(".bouton-reserver");
+        b.disabled = true; b.textContent = "…";
+      });
+      try {
+        await appelerServeur({ action: "liste" });
+        afficherStatut("");
+      } catch (e) {
+        afficherStatut("Impossible de charger les réservations pour le moment. Rafraîchis la page dans un instant 🙏");
+      }
+      afficher();
+    }
+
+    demarrer();
+  </script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+/* =========================================================
+   Wishlist Noël 2026 — feuille de style
+   Les couleurs principales sont réglables ici :
+   ========================================================= */
+:root {
+  --fond: #FAF7F2;          /* blanc cassé */
+  --carte: #FFFFFF;
+  --sauge: #9CAF88;         /* vert sauge (couleur principale) */
+  --sauge-fonce: #5F7757;   /* vert sauge foncé (textes, liens) */
+  --sauge-clair: #E3EBDD;
+  --rose: #E8B4B0;
+  --rose-clair: #F6E1DE;
+  --or: #D9B26F;
+  --rouge: #C8574D;         /* baies de houx, tampon "Réservé" */
+  --texte: #3E3A36;
+  --texte-doux: #7A736B;
+  --ombre: 0 6px 18px rgba(94, 84, 70, 0.10);
+  --rayon: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background-color: var(--fond);
+  /* petits points façon neige, très discrets */
+  background-image: radial-gradient(rgba(156, 175, 136, 0.18) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  color: var(--texte);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+/* ---------- Flocons qui tombent ---------- */
+.flocons {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.flocons span {
+  position: absolute;
+  top: -40px;
+  color: var(--sauge);
+  opacity: 0.35;
+  animation: tombe linear infinite;
+}
+.flocons span:nth-child(1)  { left: 4%;  font-size: 14px; animation-duration: 14s; animation-delay: -2s; }
+.flocons span:nth-child(2)  { left: 13%; font-size: 20px; animation-duration: 18s; animation-delay: -9s; }
+.flocons span:nth-child(3)  { left: 22%; font-size: 12px; animation-duration: 12s; animation-delay: -5s; }
+.flocons span:nth-child(4)  { left: 31%; font-size: 18px; animation-duration: 20s; animation-delay: -14s; }
+.flocons span:nth-child(5)  { left: 42%; font-size: 13px; animation-duration: 15s; animation-delay: -1s; }
+.flocons span:nth-child(6)  { left: 51%; font-size: 22px; animation-duration: 22s; animation-delay: -11s; }
+.flocons span:nth-child(7)  { left: 60%; font-size: 15px; animation-duration: 16s; animation-delay: -7s; }
+.flocons span:nth-child(8)  { left: 69%; font-size: 12px; animation-duration: 13s; animation-delay: -3s; }
+.flocons span:nth-child(9)  { left: 77%; font-size: 19px; animation-duration: 19s; animation-delay: -16s; }
+.flocons span:nth-child(10) { left: 85%; font-size: 14px; animation-duration: 15s; animation-delay: -6s; }
+.flocons span:nth-child(11) { left: 92%; font-size: 21px; animation-duration: 21s; animation-delay: -12s; }
+.flocons span:nth-child(12) { left: 97%; font-size: 12px; animation-duration: 14s; animation-delay: -8s; }
+
+@keyframes tombe {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  50%  { transform: translate(20px, 55vh) rotate(180deg); }
+  100% { transform: translate(-10px, 110vh) rotate(360deg); }
+}
+
+/* ---------- 1. En-tête ---------- */
+.entete {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 16px 24px;
+  overflow: hidden;
+}
+
+/* Boules suspendues */
+.boules {
+  display: flex;
+  justify-content: space-between;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 4%;
+  height: 130px;
+}
+.boule {
+  width: 34px;
+  transform-origin: 50% 0;
+  animation: balance 3.4s ease-in-out infinite alternate;
+}
+.boule line { stroke: var(--texte-doux); stroke-width: 1.2; opacity: 0.6; }
+.boule .attache { fill: var(--or); }
+.boule .sauge { fill: var(--sauge); }
+.boule .rose { fill: var(--rose); }
+.boule .or { fill: var(--or); }
+.boule .reflet { fill: none; stroke: rgba(255, 255, 255, 0.7); stroke-width: 2.2; stroke-linecap: round; }
+.boule-1 { height: 110px; animation-delay: -0.4s; }
+.boule-2 { height: 80px;  animation-delay: -1.6s; }
+.boule-3 { height: 130px; animation-delay: -0.9s; }
+.boule-4 { height: 90px;  animation-delay: -2.2s; }
+.boule-5 { height: 120px; animation-delay: -1.2s; }
+
+@keyframes balance {
+  from { transform: rotate(-6deg); }
+  to   { transform: rotate(6deg); }
+}
+
+.entete-contenu {
+  max-width: 640px;
+  margin: -40px auto 0;
+}
+
+.etoile {
+  width: 34px;
+  height: 34px;
+  fill: var(--or);
+  animation: scintille 2.4s ease-in-out infinite;
+}
+@keyframes scintille {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50%      { transform: scale(1.18) rotate(12deg); }
+}
+
+.titre {
+  margin: 4px 0 16px;
+  font-family: "Fredoka", "Inter", sans-serif;
+  line-height: 1;
+}
+.titre-wishlist {
+  display: block;
+  font-size: clamp(3rem, 13vw, 5.4rem);
+  font-weight: 700;
+  color: var(--sauge-fonce);
+  letter-spacing: 0.01em;
+  text-shadow: 3px 3px 0 var(--rose-clair);
+}
+.titre-noel {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 20px;
+  font-size: clamp(1.3rem, 5vw, 1.8rem);
+  font-weight: 600;
+  color: #fff;
+  background: var(--sauge);
+  border-radius: 999px;
+  transform: rotate(-3deg);
+  box-shadow: 3px 3px 0 var(--rose);
+}
+
+.sous-titre {
+  margin: 0 auto;
+  max-width: 34em;
+  color: var(--texte-doux);
+  font-size: 1rem;
+}
+.sous-titre strong { color: var(--sauge-fonce); }
+
+/* Sapins */
+.sapins {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  margin-top: 20px;
+}
+.sapin { width: 46px; fill: var(--sauge); }
+.sapin-petit { width: 32px; fill: #B9C9AE; }
+.sapin .tronc { fill: #B08B6B; }
+.sapin .deco-rose { fill: var(--rose); }
+.sapin .deco-or { fill: var(--or); }
+
+/* ---------- 2. Liste des idées ---------- */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.idees {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 16px 48px;
+}
+
+.titre-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0 28px;
+  font-family: "Fredoka", "Inter", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 5.5vw, 2rem);
+  color: var(--sauge-fonce);
+}
+.houx { width: 48px; flex-shrink: 0; }
+.houx .feuille { fill: var(--sauge); }
+.houx .baie { fill: var(--rouge); }
+
+.message-statut {
+  margin: 0 auto 24px;
+  max-width: 34em;
+  padding: 10px 16px;
+  text-align: center;
+  background: var(--rose-clair);
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+/* Grille : 2 idées côte à côte, volontairement un peu "en vrac" */
+.grille-idees {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 26px;
+  align-items: start;
+}
+
+.idee {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px 16px 16px;
+  background: var(--carte);
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+  transform: rotate(-1.2deg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s ease;
+}
+/* Décalage et inclinaison différents une carte sur deux */
+.idee:nth-child(even) {
+  margin-top: 36px;
+  transform: rotate(1.3deg);
+}
+.idee:nth-child(3n) { transform: rotate(0.6deg); }
+.idee:nth-child(4n+1) { transform: rotate(-0.5deg); }
+
+.idee:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 0 12px 26px rgba(94, 84, 70, 0.16);
+}
+
+/* Petit morceau de "masking tape" en haut de chaque carte */
+.idee::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 84px;
+  height: 22px;
+  transform: translateX(-50%) rotate(-4deg);
+  background: repeating-linear-gradient(45deg, rgba(156, 175, 136, 0.75) 0 6px, rgba(156, 175, 136, 0.5) 6px 12px);
+  border-radius: 3px;
+}
+.idee:nth-child(3n+2)::before {
+  background: repeating-linear-gradient(45deg, rgba(232, 180, 176, 0.8) 0 6px, rgba(232, 180, 176, 0.55) 6px 12px);
+  transform: translateX(-50%) rotate(3deg);
+}
+.idee:nth-child(3n)::before {
+  background: repeating-linear-gradient(45deg, rgba(217, 178, 111, 0.7) 0 6px, rgba(217, 178, 111, 0.45) 6px 12px);
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+.idee-titre {
+  margin: 0;
+  font-family: "Fredoka", "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+.idee-titre a {
+  color: var(--sauge-fonce);
+  text-decoration: underline;
+  text-decoration-color: var(--rose);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+.idee-titre a::after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: var(--texte-doux);
+}
+.idee-titre a:hover,
+.idee-titre a:focus-visible { color: var(--texte); }
+
+.idee-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: var(--sauge-clair);
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Bouton Réserver */
+.bouton-reserver {
+  align-self: flex-start;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--sauge);
+  color: #fff;
+  font-family: "Fredoka", "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--sauge-fonce);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+.bouton-reserver:hover:not(:disabled) {
+  transform: translateY(-2px) rotate(-2deg);
+  box-shadow: 0 5px 0 var(--sauge-fonce);
+}
+.bouton-reserver:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--sauge-fonce);
+}
+.bouton-reserver:focus-visible {
+  outline: 3px solid var(--or);
+  outline-offset: 3px;
+}
+.bouton-reserver:disabled { cursor: default; }
+
+/* --- Idée réservée : grisée mais toujours visible --- */
+.idee.est-reservee {
+  background: #F1EFEB;
+  box-shadow: 0 3px 10px rgba(94, 84, 70, 0.06);
+}
+.idee.est-reservee .idee-titre,
+.idee.est-reservee .idee-image {
+  filter: grayscale(0.9);
+  opacity: 0.5;
+}
+.idee.est-reservee .bouton-reserver {
+  background: #CFCAC2;
+  color: #fff;
+  box-shadow: none;
+}
+.idee.est-reservee .bouton-reserver:not(:disabled) { cursor: pointer; }
+.idee.est-reservee .bouton-reserver:hover:not(:disabled) {
+  transform: none;
+  background: #BDB7AE;
+}
+
+/* Tampon "Réservé" posé sur l'image */
+.idee.est-reservee::after {
+  content: "Réservé !";
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  padding: 4px 14px;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  border: 3px solid var(--rouge);
+  border-radius: 10px;
+  color: var(--rouge);
+  background: rgba(255, 255, 255, 0.8);
+  font-family: "Fredoka", "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: tampon 0.35s cubic-bezier(.3, 1.6, .5, 1);
+}
+@keyframes tampon {
+  from { transform: translate(-50%, -50%) rotate(-12deg) scale(2); opacity: 0; }
+  to   { transform: translate(-50%, -50%) rotate(-12deg) scale(1); opacity: 1; }
+}
+
+/* Confettis (créés par le script) */
+.confetti {
+  position: fixed;
+  z-index: 50;
+  width: 8px;
+  height: 12px;
+  margin: -6px 0 0 -4px;
+  border-radius: 2px;
+  pointer-events: none;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- 3. Pied de page ---------- */
+.pied {
+  position: relative;
+  z-index: 1;
+  padding: 16px 16px 40px;
+  text-align: center;
+  color: var(--texte-doux);
+}
+.pied p { margin: 6px 0 0; font-family: "Fredoka", "Inter", sans-serif; font-size: 1.15rem; color: var(--sauge-fonce); }
+.cadeau { width: 54px; animation: sautille 2.2s ease-in-out infinite; }
+.cadeau .boite { fill: var(--sauge); }
+.cadeau .couvercle { fill: var(--sauge-fonce); }
+.cadeau .ruban { fill: var(--rose); }
+.cadeau .noeud { fill: var(--rose); }
+@keyframes sautille {
+  0%, 70%, 100% { transform: translateY(0); }
+  80% { transform: translateY(-8px) rotate(-4deg); }
+  90% { transform: translateY(0) rotate(3deg); }
+}
+
+/* ---------- Téléphone ---------- */
+@media (max-width: 600px) {
+  .boules { height: 100px; }
+  .boule { width: 26px; }
+  .boule-1 { height: 84px; } .boule-2 { height: 62px; } .boule-3 { height: 100px; }
+  .boule-4 { height: 70px; } .boule-5 { height: 92px; }
+  .entete-contenu { margin-top: 0; }
+  .sous-titre { font-size: 0.95rem; }
+
+  .grille-idees { gap: 22px 12px; }
+  .idee { padding: 18px 10px 12px; gap: 10px; border-radius: 14px; }
+  .idee:nth-child(even) { margin-top: 26px; }
+  .idee::before { width: 60px; height: 18px; top: -9px; }
+  .idee-titre { font-size: 1rem; }
+  .bouton-reserver { padding: 8px 14px; font-size: 0.92rem; align-self: stretch; }
+  .idee.est-reservee::after { font-size: 0.95rem; padding: 3px 9px; border-width: 2px; }
+}
+
+/* Très petit écran : une seule colonne */
+@media (max-width: 340px) {
+  .grille-idees { grid-template-columns: 1fr; }
+  .idee:nth-child(even) { margin-top: 0; }
+}
+
+/* Moins d'animations pour celles et ceux qui le préfèrent */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .flocons { display: none; }
+}
