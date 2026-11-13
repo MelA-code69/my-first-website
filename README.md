@@ -62,4 +62,4 @@ C'est tout ! Chaque réservation ajoute une ligne dans ta feuille Google (numér
 
 ## Mettre le site en ligne
 
-Le plus simple : **GitHub Pages**. Dans le dépôt GitHub, va dans *Settings → Pages*, choisis la branche `main` et le dossier `/ (root)`, puis enregistre. Le site sera disponible à une adresse du type `https://<ton-pseudo>.github.io/my-first-website/`, à envoyer à la famille.
+Le plus simple : **GitHub Pages**. Dans le dépôt GitHub, va dans *Settings → Pages*, choisis la branche du site (actuellement `claude/kind-maxwell-gnlqpn`) et le dossier `/ (root)`, puis enregistre. Le site sera disponible à une adresse du type `https://<ton-pseudo>.github.io/christmas-wishlist-2026/`, à envoyer à la famille.
