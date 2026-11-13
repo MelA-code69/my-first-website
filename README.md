@@ -19,14 +19,15 @@ Dans `index.html`, chaque idée ressemble à ceci :
 <!-- ===== IDÉE 1 ===== -->
 <article class="idee" data-id="1">
   <h3 class="idee-titre"><a href="https://www.exemple.com/plaid" target="_blank" rel="noopener">Un plaid tout doux</a></h3>
-  <img class="idee-image" src="images/idee-01.svg" alt="Un plaid tout doux" loading="lazy">
+  <img class="idee-image" src="https://.../photo-du-plaid.jpg" alt="Un plaid tout doux" ...>
   <button class="bouton-reserver" type="button">Réserver</button>
 </article>
 ```
 
 - **Titre** : le texte entre `<a ...>` et `</a>`
 - **Lien du cadeau** : l'adresse dans `href="..."`
-- **Image** : l'adresse dans `src="..."`. Tu peux mettre un fichier du dossier `images/` (par exemple `images/plaid.jpg`) ou l'adresse d'une image sur internet (`https://...`).
+- **Image** : l'adresse dans `src="..."`. Pour trouver l'adresse d'une image sur un site marchand : clic droit sur la photo → « Copier l'adresse de l'image » (sur téléphone : appui long sur la photo). Si l'image ne s'affiche pas, un petit cadeau « Surprise ! » apparaît à la place.
+- **Idée sans lien** : écris juste le titre, sans `<a ...>` ni `</a>` (voir l'idée « Carte cadeau »).
 - **Ajouter une idée** : copie un bloc `<article> ... </article>` entier et donne-lui un **nouveau** numéro dans `data-id`.
 - **Supprimer une idée** : supprime son bloc `<article> ... </article>` entier.
 

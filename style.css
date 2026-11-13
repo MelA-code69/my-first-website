@@ -291,8 +291,10 @@ main {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 340px;
+  object-fit: contain;
   border-radius: 12px;
-  background: var(--sauge-clair);
+  background: #fff;
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
